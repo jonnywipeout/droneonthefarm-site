@@ -423,38 +423,7 @@ navbar.style.background = 'rgba(255, 255, 255, 0.1)';
 });
 });
 </script>
-<script id="formScript">
-document.addEventListener('DOMContentLoaded', function() {
-const form = document.querySelector('.glass-form');
-if (form) {
-form.addEventListener('submit', function(e) {
-e.preventDefault();
-// Get form values
-const name = form.querySelector('input[type="text"]').value;
-const email = form.querySelector('input[type="email"]').value;
-const message = form.querySelector('textarea').value;
-// Validate form
-if (!name || !email || !message) {
-alert('Please fill in all fields');
-return;
-}
-// Show success message (in a real app, you'd send this data to a server)
-const button = form.querySelector('button');
-const originalText = button.textContent;
-button.textContent = 'Message Sent!';
-button.classList.add('bg-green-500');
-button.disabled = true;
-// Reset form after delay
-setTimeout(() => {
-form.reset();
-button.textContent = originalText;
-button.classList.remove('bg-green-500');
-button.disabled = false;
-}, 3000);
-});
-}
-});
-</script>
+
 <script id="smoothScrollScript">
 document.addEventListener('DOMContentLoaded', function() {
 // Smooth scroll for all anchor links
