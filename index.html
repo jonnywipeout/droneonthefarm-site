@@ -448,5 +448,54 @@ behavior: 'smooth'
 });
 });
 </script>
+  <!-- Footer -->
+<footer class="text-xs text-gray-500 bg-black/5 py-4 mt-16 text-center space-x-4">
+  <button onclick="openModal('privacyModal')" class="hover:underline">Privacy Policy</button>
+  <span>|</span>
+  <button onclick="openModal('termsModal')" class="hover:underline">Terms and Conditions</button>
+  <span>|</span>
+  <button onclick="openModal('cookiesModal')" class="hover:underline">Cookies Policy</button>
+  <div class="mt-2">
+    <span class="inline-flex items-center space-x-1">
+      <i class="ri-global-line text-sm"></i>
+      <span>United Kingdom / English</span>
+    </span>
+  </div>
+  <p class="mt-1">&copy; 2025 Drone on the Farm. All rights reserved.</p>
+</footer>
+
+<!-- Modals -->
+<div id="privacyModal" class="hidden fixed inset-0 bg-black/50 flex items-center justify-center z-50">
+  <div class="bg-white p-6 max-w-lg rounded-lg shadow-lg relative">
+    <button onclick="closeModal('privacyModal')" class="absolute top-2 right-4 text-gray-500 hover:text-black">&times;</button>
+    <h2 class="text-lg font-bold mb-2">Privacy Policy</h2>
+    <p class="text-sm text-gray-700">We respect your privacy. Any data collected via contact forms or analytics is used solely to improve your experience and will not be shared or sold. You may request data deletion at any time.</p>
+  </div>
+</div>
+
+<div id="termsModal" class="hidden fixed inset-0 bg-black/50 flex items-center justify-center z-50">
+  <div class="bg-white p-6 max-w-lg rounded-lg shadow-lg relative">
+    <button onclick="closeModal('termsModal')" class="absolute top-2 right-4 text-gray-500 hover:text-black">&times;</button>
+    <h2 class="text-lg font-bold mb-2">Terms and Conditions</h2>
+    <p class="text-sm text-gray-700">By using this website, you agree to our terms: all aerial content is subject to copyright, map access is view-only unless otherwise stated, and no reproduction without written consent.</p>
+  </div>
+</div>
+
+<div id="cookiesModal" class="hidden fixed inset-0 bg-black/50 flex items-center justify-center z-50">
+  <div class="bg-white p-6 max-w-lg rounded-lg shadow-lg relative">
+    <button onclick="closeModal('cookiesModal')" class="absolute top-2 right-4 text-gray-500 hover:text-black">&times;</button>
+    <h2 class="text-lg font-bold mb-2">Cookies Policy</h2>
+    <p class="text-sm text-gray-700">We use cookies to improve user experience, monitor site traffic, and personalize content. You may choose to disable cookies in your browser settings if preferred.</p>
+  </div>
+</div>
+<script>
+  function openModal(id) {
+    document.getElementById(id).classList.remove('hidden');
+  }
+  function closeModal(id) {
+    document.getElementById(id).classList.add('hidden');
+  }
+</script>
+
 </body>
 </html>
