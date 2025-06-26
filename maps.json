@@ -1,1 +1,30 @@
 
+[
+  {
+    "title": "Ed Udale Potato Field (Planted 8th March)",
+    "location": "Apley, Telford",
+    "date": "2025-05-19",
+    "image": "/images/maps/ed-udale.jpg",
+    "description": "Main crop potato field progress report 2D orthomosaic map.",
+    "tags": ["High Resolution imagery", "2D Map / Plant health index"],
+    "maplink": "https://cloud1.webodm.net/public/task/9bdb8ac1-2a01-4f4d-9b36-5912b229ff54/map/?t=orthophoto"
+  },
+  {
+    "title": "Bridgnorth Livestock Market & Agricultural Centre",
+    "location": "Bridgnorth WV16 4QR",
+    "date": "2025-05-21",
+    "image": "/images/maps/bridgnorth.jpg",
+    "description": "2D Orthomosaic map of the Livestock centre Bridgnorth.",
+    "tags": ["Site recon.", "2D Mapping"],
+    "maplink": "https://cloud1.webodm.net/public/project/b9eb7168-b0c6-4bd0-a321-b5ca4762edc9/map/?t=orthophoto"
+  },
+  {
+    "title": "Charlton Gardens residential site",
+    "location": "Apley, Telford",
+    "date": "2025",
+    "image": "/images/maps/charlton.jpg",
+    "description": "Countryside properties / Pickstock homes residential development in Apley.",
+    "tags": ["build progress", "2D Orthomosaic map"],
+    "maplink": "https://cloud1.webodm.net/public/task/6df15f11-4040-4758-8764-c7b86b47237c/map/?t=orthophoto"
+  }
+]
