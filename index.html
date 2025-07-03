@@ -1,330 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Drone on the Farm - Aerial Mapping Services</title>
-  <meta name="description" content="Precision drone mapping and aerial services for agriculture, construction, and planning in the UK. Get high-resolution orthomosaics, 3D models, and SFI-compliant reports.">
-<meta name="robots" content="index, follow">
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
-<script src="https://cdn.tailwindcss.com/3.4.16"></script>
-<script>tailwind.config={theme:{extend:{colors:{primary:'#16a34a',secondary:'#166534'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
-<style>
-:where([class^="ri-"])::before { content: "\f3c2"; }
-.glass {
-background: rgba(255, 255, 255, 0.1);
-backdrop-filter: blur(10px);
--webkit-backdrop-filter: blur(10px);
-border: 1px solid rgba(255, 255, 255, 0.18);
-box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
-} 
-.glass-card {
-background: rgba(255, 255, 255, 0.15);
-backdrop-filter: blur(10px);
--webkit-backdrop-filter: blur(10px);
-border: 1px solid rgba(255, 255, 255, 0.18);
-box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
-transition: all 0.3s ease;
-}
-.glass-card:hover {
-background: rgba(255, 255, 255, 0.25);
-transform: translateY(-5px);
-box-shadow: 0 12px 32px 0 rgba(31, 38, 135, 0.1);
-}
-.glass-button {
-background: rgba(22, 163, 74, 0.2);
-  
-backdrop-filter: blur(10px);
--webkit-backdrop-filter: blur(10px);
-border: 1px solid rgba(255, 255, 255, 0.18);
-box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
-transition: all 0.3s ease;
-}
-.glass-button:hover {
-background: rgba(22, 163, 74, 0.3);
-
-box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1);
-}
-.glass-form input, .glass-form textarea {
-background: rgba(255, 255, 255, 0.1);
-backdrop-filter: blur(10px);
--webkit-backdrop-filter: blur(10px);
-border: 1px solid rgba(255, 255, 255, 0.18);
-box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
-transition: all 0.3s ease;
-}
-.glass-form input:focus, .glass-form textarea:focus {
-background: rgba(255, 255, 255, 0.2);
-box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1);
-}
-.glass-nav {
-background: rgba(255, 255, 255, 0.1);
-backdrop-filter: blur(10px);
--webkit-backdrop-filter: blur(10px);
-border-bottom: 1px solid rgba(255, 255, 255, 0.18);
-}
-.glass-gallery-item {
-background: rgba(255, 255, 255, 0.1);
-backdrop-filter: blur(5px);
--webkit-backdrop-filter: blur(5px);
-border: 1px solid rgba(255, 255, 255, 0.18);
-overflow: hidden;
-transition: all 0.3s ease;
-}
-.glass-gallery-item:hover {
-background: rgba(255, 255, 255, 0.2);
-transform: scale(1.02);
-}
-.glass-gallery-item img {
-transition: all 0.5s ease;
-}
-.glass-gallery-item:hover img {
-transform: scale(1.05);
-}
-.glass-testimonial {
-background: rgba(255, 255, 255, 0.1);
-backdrop-filter: blur(10px);
--webkit-backdrop-filter: blur(10px);
-border: 1px solid rgba(255, 255, 255, 0.18);
-}
-body {
-font-family: 'Inter', sans-serif;
-background-color: #f8fafc;
-background-image:
-radial-gradient(circle at 10% 20%, rgba(45, 106, 79, 0.05) 0%, transparent 20%),
-radial-gradient(circle at 90% 60%, rgba(29, 53, 87, 0.05) 0%, transparent 25%),
-radial-gradient(circle at 50% 100%, rgba(45, 106, 79, 0.05) 0%, transparent 30%);
-background-attachment: fixed;
-}
-</style>
-</head>
-<body>
-<!-- Navigation -->
-<nav class="glass-nav fixed w-full z-50 px-6 py-4">
-<div class="container mx-auto flex justify-between items-center">
-<a href="#home" class="text-3xl font-['Pacifico'] text-primary">Drone on the farm</a>
-
-<div class="hidden md:flex space-x-8">
-<a href="#home" class="text-gray-800 hover:text-primary transition-colors">Home</a>
-<a href="#services" class="text-gray-800 hover:text-primary transition-colors">Services</a>
-<a href="#gallery" class="text-gray-800 hover:text-primary transition-colors">Gallery</a>
-<a href="#map-access" class="text-gray-800 hover:text-primary transition-colors">Map Access</a>
-<a href="#contact" class="text-gray-800 hover:text-primary transition-colors">Contact</a>
-</div>
-<button class="md:hidden w-10 h-10 flex items-center justify-center">
-<i class="ri-menu-line text-2xl text-gray-800"></i>
-</button>
-</div>
-</nav>
-<!-- Hero Section -->
-<section id="home" class="relative min-h-screen flex items-center pt-16" style="background-image: url('https://readdy.ai/api/search-image?query=DJI%20Matrice%204E%20enterprise%20drone%20flying%20over%20vast%20green%20agricultural%20fields%2C%20aerial%20view%20showing%20drone%20and%20farmland%20below%2C%20golden%20hour%20lighting%2C%20cinematic%20atmosphere%2C%20professional%20drone%20photography&width=1920&height=1080&seq=drone1&orientation=landscape'); background-size: cover; background-position: center;">
-<div class="absolute inset-0 bg-gradient-to-r from-black/40 to-transparent"></div>
-<div class="container mx-auto px-6 py-24 relative z-10">
-<div class="max-w-2xl glass p-10 rounded-lg">
-<h1 class="text-5xl font-['Pacifico'] text-white mb-6">Drone on the farm</h1>
-<h2 class="text-2xl text-white/90 mb-8">Precision Drone Mapping & Aerial Imaging for Farming, Planning, and Site Management</h2>
-<p class="text-white/80 mb-8 text-lg">2D orthomosaic maps · High-resolution georeferenced field imagery · 3D terrain and stockpile analysis · SFI-compliant mapping · Construction site mapping and progress imagery · Aerial 4K cinematography</p>
-<div class="flex flex-wrap gap-4">
-<a href="#services" class="glass-button text-white px-8 py-3 rounded-button font-medium whitespace-nowrap">Explore Services</a>
-<a href="#contact" class="bg-primary text-white px-8 py-3 rounded-button font-medium hover:bg-primary/90 transition-colors whitespace-nowrap !rounded-button">Contact Us</a>
-</div>
-</div>
-</div>
-</section>
-<!-- Latest Project Banner -->
-<div class="bg-primary/95 text-white py-4 px-6">
-<div class="container mx-auto">
-<p class="text-center">"Call or message us today — whether it’s a simple roof check or a full‑field orthomosaic map, we’re here to help!"</p>
-</div>
-</div>
-<!-- Services Section -->
-<section id="services" class="py-24 px-6">
-<div class="container mx-auto">
-<h2 class="text-4xl font-bold text-center mb-16 text-gray-800">Our Drone Services</h2>
-<div class="grid md:grid-cols-3 gap-8">
-<!-- Service 1 -->
-<div class="glass-card rounded-lg p-8 flex flex-col items-center text-center">
-<div class="w-20 h-20 flex items-center justify-center bg-primary/10 rounded-full mb-6">
-<i class="ri-landscape-line text-3xl text-primary"></i>
-</div>
-<h3 class="text-2xl font-bold mb-4 text-gray-800">Field & Forestry Mapping</h3>
-<p class="text-gray-600 mb-6">Detailed aerial surveys of your farmland or woodland using drone technology to accurately map field boundaries, forestry compartments, track crop or canopy health, and spot issues like poor drainage, windthrow damage, or invasive species early. These high-resolution maps support better decision-making and help with SFI documentation, woodland management plans, and environmental compliance.</p>
-<p class="text-primary italic mt-auto">"Helping farmers and landowners plan better and stay SFI-compliant."</p>
-</div>
-<!-- Service 2 -->
-<div class="glass-card rounded-lg p-8 flex flex-col items-center text-center">
-<div class="w-20 h-20 flex items-center justify-center bg-primary/10 rounded-full mb-6">
-<i class="ri-building-4-line text-3xl text-primary"></i>
-</div>
-<h3 class="text-2xl font-bold mb-4 text-gray-800">AEC Progress Reports</h3>
-<p class="text-gray-600 mb-6">High-resolution aerial photos and site reports for construction or land development projects. Ideal for builders, developers, or estate owners needing regular progress checks, boundary verification, or visual updates for planning and compliance.</p>
-<p class="text-primary italic mt-auto">"Clear aerial evidence to keep your build on track."</p>
-</div>
-<!-- Service 3 -->
-<div class="glass-card rounded-lg p-8 flex flex-col items-center text-center">
-<div class="w-20 h-20 flex items-center justify-center bg-primary/10 rounded-full mb-6">
-<i class="ri-map-2-line text-3xl text-primary"></i>
-</div>
-<h3 class="text-2xl font-bold mb-4 text-gray-800">2D Orthomosaic Maps & 3D Models</h3>
-<p class="text-gray-600 mb-6">Full-field stitched maps and 3D terrain models created from hundreds of drone photos — perfect for measuring areas, checking crop condition, inspecting buildings or roofs, or planning drainage and fertiliser application.</p>
-<p class="text-primary italic mt-auto">"Turning field-level imagery into practical decisions."</p>
-</div>
-</div>
-</div>
-</section>
-<!-- Gallery Section -->
-<section id="gallery" class="py-24 px-6 bg-gray-50">
-<div class="container mx-auto">
-<h2 class="text-4xl font-bold text-center mb-16 text-gray-800">Gallery</h2>
-<div class="grid md:grid-cols-3 gap-6">
-<!-- Gallery Item 1 -->
-<div class="glass-gallery-item rounded-lg overflow-hidden aspect-video">
-<img src="https://readdy.ai/api/search-image?query=close-up%20of%20professional%20drone%20equipment%20with%20camera%20gimbal%2C%20high-tech%20precision%20mapping%20technology%2C%20studio%20lighting%2C%20dark%20background%2C%20product%20photography&width=600&height=400&seq=drone2&orientation=landscape" alt="Precision Drone Technology" class="w-full h-full object-cover">
-<div class="absolute inset-0 bg-black/30 opacity-0 hover:opacity-100 transition-opacity flex items-end">
-<p class="text-white p-4">Precision Drone Technology</p>
-</div>
-</div>
-<!-- Gallery Item 2 -->
-<div class="glass-gallery-item rounded-lg overflow-hidden aspect-video">
-<img src="https://readdy.ai/api/search-image?query=aerial%20view%20of%20corn%20field%20with%20perfect%20rows%2C%20vibrant%20green%20crops%2C%20agricultural%20landscape%2C%20sunny%20day%2C%20high-resolution%20drone%20photography&width=600&height=400&seq=drone3&orientation=landscape" alt="Corn Field Mapping" class="w-full h-full object-cover">
-<div class="absolute inset-0 bg-black/30 opacity-0 hover:opacity-100 transition-opacity flex items-end">
-<p class="text-white p-4">Corn Field Mapping</p>
-</div>
-</div>
-<!-- Gallery Item 3 -->
-<div class="glass-gallery-item rounded-lg overflow-hidden aspect-video">
-<img src="https://readdy.ai/api/search-image?query=agricultural%20machinery%20working%20in%20field%20at%20night%20with%20lights%20on%2C%20aerial%20view%2C%20precision%20farming%2C%20harvesting%20equipment%2C%20dramatic%20lighting&width=600&height=400&seq=drone4&orientation=landscape" alt="Night Farming Operations" class="w-full h-full object-cover">
-<div class="absolute inset-0 bg-black/30 opacity-0 hover:opacity-100 transition-opacity flex items-end">
-<p class="text-white p-4">Night Farming Operations</p>
-</div>
-</div>
-<!-- Gallery Item 4 -->
-<div class="glass-gallery-item rounded-lg overflow-hidden aspect-video">
-<img src="https://readdy.ai/api/search-image?query=aerial%20view%20of%20construction%20site%20with%20foundation%20work%2C%20building%20progress%2C%20earthworks%2C%20construction%20equipment%2C%20professional%20drone%20photography&width=600&height=400&seq=drone5&orientation=landscape" alt="Construction Site Progress" class="w-full h-full object-cover">
-<div class="absolute inset-0 bg-black/30 opacity-0 hover:opacity-100 transition-opacity flex items-end">
-<p class="text-white p-4">Construction Site Progress</p>
-</div>
-</div>
-<!-- Gallery Item 5 -->
-<div class="glass-gallery-item rounded-lg overflow-hidden aspect-video">
-<img src="https://readdy.ai/api/search-image?query=aerial%20view%20of%20potato%20field%20with%20perfect%20rows%2C%20agricultural%20landscape%2C%20fertile%20soil%2C%20crop%20rows%2C%20professional%20drone%20photography&width=600&height=400&seq=drone6&orientation=landscape" alt="Potato Field Orthomosaic" class="w-full h-full object-cover">
-<div class="absolute inset-0 bg-black/30 opacity-0 hover:opacity-100 transition-opacity flex items-end">
-<p class="text-white p-4">Potato Field Orthomosaic</p>
-</div>
-</div>
-<!-- Gallery Item 6 -->
-<div class="glass-gallery-item rounded-lg overflow-hidden aspect-video">
-<img src="https://readdy.ai/api/search-image?query=tractor%20working%20in%20wheat%20field%20during%20harvest%2C%20agricultural%20machinery%2C%20golden%20wheat%2C%20dust%2C%20dramatic%20lighting%2C%20aerial%20photography&width=600&height=400&seq=drone7&orientation=landscape" alt="Harvest Operations" class="w-full h-full object-cover">
-<div class="absolute inset-0 bg-black/30 opacity-0 hover:opacity-100 transition-opacity flex items-end">
-<p class="text-white p-4">Harvest Operations</p>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- Map Access Section -->
-<section id="map-access" class="py-24 px-6">
-<div class="container mx-auto">
-<h2 class="text-4xl font-bold text-center mb-16 text-gray-800">Client Map Access</h2>
-<div class="max-w-4xl mx-auto">
-<div class="space-y-6">
-<!-- Map 1 -->
-<div class="glass-card p-8 rounded-lg">
-<a href="https://cloud1.webodm.net/public/project/79ec4733-fccb-4fb2-8fd0-7f053da179f3/map/?t=orthophoto" target="_blank" rel="noopener">
-  <div class="aspect-video rounded-lg overflow-hidden mb-6 hover:opacity-80 transition duration-200">
-    <div class="w-full h-full bg-cover bg-center" style="background-image: url('images/potatofield29062025.jpg');"></div>
-  </div>
-</a>
-
-<div class="flex flex-col md:flex-row gap-6 items-center">
-<div class="flex-1">
-<h3 class="text-xl font-semibold mb-2 text-gray-800">Ed Udale Potato Field (Planted 8th March)</h3>
-<p class="text-gray-600 mb-2">29th June 2025 - Apley, Telford</p>
-<p class="text-gray-600">Main crop potato field progress report 2D orthomosaic map.</p>
-<div class="flex gap-4 mt-4">
-<span class="text-sm bg-primary/10 text-primary px-3 py-1 rounded-full">High Resolution imagery</span>
-<span class="text-sm bg-primary/10 text-primary px-3 py-1 rounded-full">2D Map / Plant health index</span>
-</div>
-</div>
-<a href="https://cloud1.webodm.net/public/project/79ec4733-fccb-4fb2-8fd0-7f053da179f3/map/?t=orthophoto" target="_blank" class="glass-button text-primary px-6 py-3 rounded-button font-medium whitespace-nowrap !rounded-button">View Full Map</a>
-</div>
-</div>
-
-<!-- Map 2 -->
-<div class="glass-card p-8 rounded-lg">
-<a href="https://cloud1.webodm.net/public/project/b9eb7168-b0c6-4bd0-a321-b5ca4762edc9/map/?t=orthophoto" target="_blank" rel="noopener">
-  <div class="aspect-video rounded-lg overflow-hidden mb-6 hover:opacity-80 transition duration-200">
-    <div class="w-full h-full bg-cover bg-center" style="background-image: url('images/livestock.png');"></div>
-  </div>
-</a>
-
-<div class="flex flex-col md:flex-row gap-6 items-center">
-<div class="flex-1">
-<h3 class="text-xl font-semibold mb-2 text-gray-800">Bridgnorth Livestock Market & Agricultural Centre</h3>
-<p class="text-gray-600 mb-2">21st May 2025 – Bridgnorth WV16 4QR</p>
-<p class="text-gray-600">2D Orthomosaic map of the Livestock centre Bridgnorth.</p>
-<div class="flex gap-4 mt-4">
-<span class="text-sm bg-primary/10 text-primary px-3 py-1 rounded-full">Site reconnaissance.</span>
-<span class="text-sm bg-primary/10 text-primary px-3 py-1 rounded-full">2D Mapping</span>
-</div>
-</div>
-<a href="https://cloud1.webodm.net/public/project/b9eb7168-b0c6-4bd0-a321-b5ca4762edc9/map/?t=orthophoto" target="_blank" class="glass-button text-primary px-6 py-3 rounded-button font-medium whitespace-nowrap !rounded-button">View Full Map</a>
-</div>
-</div>
-  
-<!-- Map 3 -->
-<div class="glass-card p-8 rounded-lg">
-<a href="https://cloud1.webodm.net/public/task/6df15f11-4040-4758-8764-c7b86b47237c/map/?t=orthophoto" target="_blank" rel="noopener">
-  <div class="aspect-video rounded-lg overflow-hidden mb-6 hover:opacity-80 transition duration-200">
-    <div class="w-full h-full bg-cover bg-center" style="background-image: url('images/charltongardens.png');"></div>
-  </div>
-</a>
-
-<div class="flex flex-col md:flex-row gap-6 items-center">
-<div class="flex-1">
-<h3 class="text-xl font-semibold mb-2 text-gray-800">Charlton Gardens residential site</h3>
-<p class="text-gray-600 mb-2">2025 – Charlton Gardens Estate map</p>
-<p class="text-gray-600">Countryside properties / Pickstock homes residential development in Apley, Telford.</p>
-<div class="flex gap-4 mt-4">
-<span class="text-sm bg-primary/10 text-primary px-3 py-1 rounded-full">Construction build progress</span>
-<span class="text-sm bg-primary/10 text-primary px-3 py-1 rounded-full">2D Orthomosaic map</span>
-</div>
-</div>
-<a href="https://cloud1.webodm.net/public/task/6df15f11-4040-4758-8764-c7b86b47237c/map/?t=orthophoto" target="_blank" class="glass-button text-primary px-6 py-3 rounded-button font-medium whitespace-nowrap !rounded-button">View Full Map</a>
-</div>
-</div>
-</div>
-<div class="text-center mt-10">
-<a href="#contact" class="glass-button text-primary px-8 py-3 rounded-button font-medium whitespace-nowrap !rounded-button">Request Map Access</a>
-</div>
-</div>
-</div>
-</section>
-
-<!-- Testimonial Section -->
-<section class="py-24 px-6 bg-gray-50">
-<div class="container mx-auto">
-<h2 class="text-4xl font-bold text-center mb-16 text-gray-800">What The Industry Says</h2>
-<div class="max-w-4xl mx-auto glass-testimonial rounded-lg p-10">
-<blockquote class="text-xl text-gray-600 italic text-center mb-6">
-"Drone mapping technology is revolutionizing modern agriculture. These aerial systems provide unprecedented insights into field conditions and resource management—enabling precision farming application practices that can boost yields and reduce costs and environmental impact.Drone mapping boosts productivity, supports SFI compliance, and improves resource management"
-</blockquote>
-<div class="text-center">
-<p class="font-semibold text-gray-800">Modern Farming Today</p>
-<p class="text-gray-500">Agricultural Technology Special Issue, 2025</p>
-</div>
-</div>
-</div>
-</section>
-
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Drone on the Farm - Aerial Mapping Services</title>
@@ -366,110 +42,149 @@ background-attachment: fixed;
     .glass-form input:focus, .glass-form textarea:focus {
       background: rgba(255, 255, 255, 0.2);
     }
+    .mobile-menu {
+      display: none;
+    }
+    @media (max-width: 768px) {
+      .mobile-menu.open {
+        display: block;
+      }
+    }
   </style>
 </head>
 <body class="bg-white text-gray-800">
-  <!-- Contact Section -->
-  <section id="contact" class="py-24 px-6">
-    <div class="container mx-auto">
-      <h2 class="text-4xl font-bold text-center mb-16 text-gray-800">Get in Touch</h2>
-      <div class="max-w-6xl mx-auto glass-card rounded-lg p-12">
-        <div class="grid md:grid-cols-2 gap-12">
-          <!-- Company Info -->
-          <div class="flex flex-col justify-between">
-            <div>
-              <h3 class="text-2xl font-bold text-gray-800 mb-6">Let's Connect</h3>
-              <p class="text-gray-600 mb-8">Professional UAV mapping and surveying in the UK using the latest drone technology for agriculture engineering and construction.</p>
-              <div class="flex flex-col gap-6">
-                <a href="mailto:droneonthefarm@outlook.com" class="flex items-center gap-4 text-gray-600 hover:text-primary transition-colors">
-                  <div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-full">
-                    <i class="ri-mail-line text-xl text-primary"></i>
-                  </div>
-                  <span>droneonthefarm@outlook.com</span>
-                </a>
-                <a href="https://www.youtube.com/@jonnywipeout" target="_blank" class="flex items-center gap-4 text-gray-600 hover:text-primary transition-colors">
-                  <div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-full">
-                    <i class="ri-youtube-line text-xl text-primary"></i>
-                  </div>
-                  <span>Watch on YouTube</span>
-                </a>
-                <a href="https://www.facebook.com/share/18qnxU1w6e/?mibextid=wwXIfr" target="_blank" class="flex items-center gap-4 text-gray-600 hover:text-primary transition-colors">
-                  <div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-full">
-                    <i class="ri-facebook-line text-xl text-primary"></i>
-                  </div>
-                  <span>Find us on Facebook</span>
-                </a>
-                <div class="flex items-center gap-4 text-gray-600">
-  <div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-full">
-    <i class="ri-phone-line text-xl text-primary"></i>
+
+<!-- Navigation -->
+<nav role="navigation" class="glass-nav fixed w-full z-50 px-6 py-4">
+  <div class="container mx-auto flex justify-between items-center">
+    <a href="#home" class="text-3xl font-['Pacifico'] text-primary">Drone on the Farm</a>
+    <div class="hidden md:flex space-x-8">
+      <a href="#home" class="text-gray-800 hover:text-primary transition-colors">Home</a>
+      <a href="#services" class="text-gray-800 hover:text-primary transition-colors">Services</a>
+      <a href="#gallery" class="text-gray-800 hover:text-primary transition-colors">Gallery</a>
+      <a href="#map-access" class="text-gray-800 hover:text-primary transition-colors">Map Access</a>
+      <a href="#contact" class="text-gray-800 hover:text-primary transition-colors">Contact</a>
+    </div>
+    <button onclick="toggleMenu()" aria-label="Toggle Menu" class="md:hidden w-10 h-10 flex items-center justify-center">
+      <i class="ri-menu-line text-2xl text-gray-800"></i>
+    </button>
   </div>
-  <span>07771 190394</span>
-</div>
-              </div>
-            </div>
-            <div class="mt-8">
-              <h3 class="text-3xl font-['Pacifico'] text-primary mb-2">Drone on the farm</h3>
-              <p class="text-gray-500">© 2025 All rights reserved.</p>
-            </div>
-          </div>
-          <!-- Contact Form -->
-          <div>
-            <form name="contact" method="POST" action="/thank-you.html" data-netlify="true" netlify-honeypot="bot-field" class="glass-form">
-              <input type="hidden" name="form-name" value="contact">
-              <p hidden><label>Don’t fill this out: <input name="bot-field" /></label></p>
-              <div class="mb-6">
-                <input type="text" name="name" placeholder="Your Name" class="w-full px-4 py-3 rounded-lg text-gray-800 bg-white/50 border-none focus:ring-2 focus:ring-primary/50 outline-none" required>
-              </div>
-              <div class="mb-6">
-                <input type="email" name="email" placeholder="Your Email" class="w-full px-4 py-3 rounded-lg text-gray-800 bg-white/50 border-none focus:ring-2 focus:ring-primary/50 outline-none" required>
-              </div>
-              <div class="mb-6">
-                <textarea name="message" placeholder="Your Message" rows="5" class="w-full px-4 py-3 rounded-lg text-gray-800 bg-white/50 border-none focus:ring-2 focus:ring-primary/50 outline-none" required></textarea>
-              </div>
-              <div class="mb-8">
-                <button type="submit" class="bg-primary text-white px-8 py-3 rounded-button font-medium hover:bg-primary/90 transition-colors w-full whitespace-nowrap">Send Message</button>
-              </div>
-              <div class="mt-8 text-center">
-                <a href="/clientform.html" class="inline-block bg-green-600 hover:bg-green-700 text-white font-semibold text-lg px-6 py-3 rounded-md shadow transition duration-200">
-                  Fill Out Our Client Job Proposal Form
-                </a>
-                <p class="mt-3 text-sm text-gray-700">
-                  For drone mapping, SFI boundaries, inspections or aerial projects – use this form for quick booking.
-                </p>
-              </div>
-            </form>
-          </div>
-        </div>
+  <div id="mobileMenu" class="mobile-menu px-6 pt-4 pb-6 md:hidden">
+    <a href="#home" class="block py-2 text-gray-800 hover:text-primary">Home</a>
+    <a href="#services" class="block py-2 text-gray-800 hover:text-primary">Services</a>
+    <a href="#gallery" class="block py-2 text-gray-800 hover:text-primary">Gallery</a>
+    <a href="#map-access" class="block py-2 text-gray-800 hover:text-primary">Map Access</a>
+    <a href="#contact" class="block py-2 text-gray-800 hover:text-primary">Contact</a>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<section id="home" class="relative min-h-screen flex items-center pt-16" style="background-image: url('https://readdy.ai/api/search-image?query=DJI%20Matrice%204E%20enterprise%20drone%20flying%20over%20vast%20green%20agricultural%20fields%2C%20aerial%20view%20showing%20drone%20and%20farmland%20below%2C%20golden%20hour%20lighting%2C%20cinematic%20atmosphere%2C%20professional%20drone%20photography&width=1920&height=1080&seq=drone1&orientation=landscape'); background-size: cover; background-position: center;">
+  <div class="absolute inset-0 bg-gradient-to-r from-black/40 to-transparent"></div>
+  <div class="container mx-auto px-6 py-24 relative z-10">
+    <div class="max-w-2xl glass p-10 rounded-lg">
+      <h1 class="text-5xl font-['Pacifico'] text-white mb-6">Drone on the farm</h1>
+      <h2 class="text-2xl text-white/90 mb-8">Precision Drone Mapping & Aerial Imaging for Farming, Planning, and Site Management</h2>
+      <p class="text-white/80 mb-8 text-lg">2D orthomosaic maps · High-resolution georeferenced field imagery · 3D terrain and stockpile analysis · SFI-compliant mapping · Construction site mapping and progress imagery · Aerial 4K cinematography</p>
+      <div class="flex flex-wrap gap-4">
+        <a href="#services" class="glass-button text-white px-8 py-3 rounded-button font-medium whitespace-nowrap">Explore Services</a>
+        <a href="#contact" class="bg-primary text-white px-8 py-3 rounded-button font-medium hover:bg-primary/90 transition-colors whitespace-nowrap !rounded-button">Contact Us</a>
       </div>
     </div>
-  </section>
-  <!-- Footer -->
-  <footer class="text-xs text-gray-500 bg-black/5 py-4 text-center">
-    &copy; 2025 Drone on the Farm. All rights reserved.
-  </footer>
-</body>
-</html>
-  
-<!-- Certification -->  
-<section class="py-8 px-6 bg-gray-50">
-  <div class="container mx-auto text-center">
-    <h3 class="text-xl font-semibold text-gray-800 mb-4">Our Qualifications & Compliance</h3>
-    <div class="flex flex-wrap justify-center items-center gap-8">
-      <img src="images/a2cofc.png" alt="A2 CofC Certificate Logo" class="h-16">
-      <img src="images/caa.png" alt="CAA logo" class="h-16">
-      <img src="images/greyarrows.png" alt="Grey Arrows Drone Club" class="h-16">
-      <img src="images/insurance.png" alt="Insurance" class="h-16">
-      <img src="images/matrice4e.png" alt="DJI Matrice 4E" class="h-16">
-    </div>
-    <p class="mt-4 text-sm text-gray-600">
-      Fully CAA‑approved and certified – ensuring we meet the highest standards for safe and compliant drone operations under UK Open‑Category regulations (A2 CofC).
-    </p>
   </div>
 </section>
 
+<!-- Latest Project Banner -->
+<div class="bg-primary/95 text-white py-4 px-6">
+  <div class="container mx-auto">
+    <p class="text-center">"Call or message us today — whether it’s a simple roof check or a full‑field orthomosaic map, we’re here to help!"</p>
+  </div>
+</div>
 
-  
-  <!-- Footer -->
+<!-- Services Section -->
+<section id="services" class="py-20 bg-gray-50">
+  <div class="container mx-auto px-6">
+    <h2 class="text-4xl font-bold text-center text-gray-800 mb-12">Our Services</h2>
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="glass p-6 rounded-xl shadow">
+        <h3 class="text-xl font-semibold mb-2">2D Orthomosaic Mapping</h3>
+        <p class="text-sm text-gray-700">High-resolution stitched imagery for field boundaries, crop health, and land planning. Ideal for SFI and DEFRA applications.</p>
+      </div>
+      <div class="glass p-6 rounded-xl shadow">
+        <h3 class="text-xl font-semibold mb-2">3D Terrain Modelling</h3>
+        <p class="text-sm text-gray-700">Generate detailed DSMs, surface models, and digital twins for construction, stockpile calculations, and forestry surveys.</p>
+      </div>
+      <div class="glass p-6 rounded-xl shadow">
+        <h3 class="text-xl font-semibold mb-2">Aerial Photography & Video</h3>
+        <p class="text-sm text-gray-700">Capture cinematic 4K footage and high-quality stills of estates, buildings, landscapes, and agriculture sites.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Gallery Section -->
+<section id="gallery" class="py-20 bg-white">
+  <div class="container mx-auto px-6">
+    <h2 class="text-4xl font-bold text-center text-gray-800 mb-12">Gallery</h2>
+    <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
+      <img src="images/potatofield29062025.jpg" alt="Potato Field Map" class="rounded-xl shadow" loading="lazy">
+      <img src="images/construction-site.jpg" alt="Construction Progress" class="rounded-xl shadow" loading="lazy">
+      <img src="images/roof-inspection.jpg" alt="Roof Inspection" class="rounded-xl shadow" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<!-- Map Access Section -->
+<section id="map-access" class="py-20 bg-gray-50">
+  <div class="container mx-auto px-6">
+    <h2 class="text-4xl font-bold text-center text-gray-800 mb-12">Client Map Access</h2>
+    <div class="text-center">
+      <p class="mb-6">Click below to view your private interactive drone maps:</p>
+      <a href="/client-maps.html" class="bg-primary text-white px-6 py-3 rounded-button hover:bg-primary/90 transition">View Maps</a>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonial Section -->
+<section id="testimonials" class="py-20 bg-white">
+  <div class="container mx-auto px-6">
+    <h2 class="text-4xl font-bold text-center text-gray-800 mb-12">What Our Clients Say</h2>
+    <div class="glass p-6 rounded-xl max-w-2xl mx-auto">
+      <blockquote class="italic text-gray-700">“The aerial map of our estate was incredibly useful for planning and SFI documentation. Highly recommend this professional service.”</blockquote>
+      <p class="mt-4 text-right font-semibold">– J. Meadows, Shropshire</p>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="py-20 bg-gray-50">
+  <div class="container mx-auto px-6">
+    <h2 class="text-4xl font-bold text-center text-gray-800 mb-12">Contact Us</h2>
+    <form name="contact" method="POST" data-netlify="true" class="max-w-xl mx-auto glass-form grid gap-4">
+      <input type="hidden" name="form-name" value="contact">
+      <input type="text" name="name" placeholder="Your Name" required class="p-3 rounded">
+      <input type="email" name="email" placeholder="Your Email" required class="p-3 rounded">
+      <textarea name="message" rows="5" placeholder="Your Message" required class="p-3 rounded"></textarea>
+      <button type="submit" class="bg-primary text-white px-6 py-3 rounded-button hover:bg-primary/90 transition">Send Message</button>
+    </form>
+  </div>
+</section>
+
+<!-- Certification Section -->
+<section id="certifications" class="py-20 bg-white">
+  <div class="container mx-auto px-6 text-center">
+    <h2 class="text-3xl font-bold text-gray-800 mb-8">Our Certifications & Memberships</h2>
+    <div class="flex flex-wrap justify-center gap-6">
+      <img src="images/a2cofc.png" alt="A2 CofC" class="h-16 object-contain">
+      <img src="images/caa.png" alt="CAA Registered" class="h-16 object-contain">
+      <img src="images/greyarrows.png" alt="Grey Arrows Drone Club" class="h-16 object-contain">
+      <img src="images/allianz.png" alt="Allianz Insurance" class="h-16 object-contain">
+      <img src="images/matrice4e.png" alt="DJI Matrice 4E Drone" class="h-16 object-contain">
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
 <footer class="text-xs text-gray-500 bg-black/5 py-4 mt-16 text-center space-x-4">
   <button onclick="openModal('privacyModal')" class="hover:underline">Privacy Policy</button>
   <span>|</span>
@@ -509,12 +224,16 @@ background-attachment: fixed;
     <p class="text-sm text-gray-700">We use cookies to improve user experience, monitor site traffic, and personalize content. You may choose to disable cookies in your browser settings if preferred.</p>
   </div>
 </div>
+
 <script>
   function openModal(id) {
     document.getElementById(id).classList.remove('hidden');
   }
   function closeModal(id) {
     document.getElementById(id).classList.add('hidden');
+  }
+  function toggleMenu() {
+    document.getElementById('mobileMenu').classList.toggle('open');
   }
 </script>
 
