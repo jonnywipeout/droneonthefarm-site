@@ -3,47 +3,60 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Client Proposal Form</title>
+  <title>Client Job Proposal Form – Drone on the Farm</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    body { font-family: 'Inter', sans-serif; background-color: #f8fafc; }
-    .glass-form input, .glass-form textarea {
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f8fafc;
+      background-image:
+        radial-gradient(circle at 10% 20%, rgba(45, 106, 79, 0.05) 0%, transparent 20%),
+        radial-gradient(circle at 90% 60%, rgba(29, 53, 87, 0.05) 0%, transparent 25%),
+        radial-gradient(circle at 50% 100%, rgba(45, 106, 79, 0.05) 0%, transparent 30%);
+      background-attachment: fixed;
+    }
+    .glass-form input,
+    .glass-form textarea {
       background: rgba(255, 255, 255, 0.15);
       backdrop-filter: blur(10px);
       border: 1px solid rgba(0, 0, 0, 0.1);
       box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
+      padding: 0.75rem;
+      width: 100%;
+      border-radius: 0.5rem;
     }
-    .glass-form input:focus, .glass-form textarea:focus {
+    .glass-form input:focus,
+    .glass-form textarea:focus {
       background: rgba(255, 255, 255, 0.25);
       outline: none;
     }
   </style>
 </head>
-<body class="bg-gray-100 min-h-screen flex items-center justify-center p-6">
+<body class="min-h-screen flex items-center justify-center p-6">
 
-  <section class="max-w-3xl w-full glass-form bg-white/50 backdrop-blur-md p-8 rounded-lg shadow-lg">
+  <section class="max-w-3xl w-full glass-form bg-white/60 backdrop-blur-md p-8 rounded-xl shadow-lg">
     <form name="client-proposal" method="POST" data-netlify="true" action="/thank-you.html" class="space-y-6">
       <input type="hidden" name="form-name" value="client-proposal">
-      <h2 class="text-2xl font-bold text-gray-800">Client Job Proposal – Information Sheet</h2>
+      <h2 class="text-3xl font-bold text-gray-800 text-center mb-8">Client Job Proposal – Information Sheet</h2>
 
       <div>
         <label class="block font-medium text-gray-700">Client Name</label>
-        <input type="text" name="client-name" autocomplete="name" required class="mt-1 w-full p-2 rounded">
+        <input type="text" name="client-name" autocomplete="name" required>
       </div>
 
       <div>
         <label class="block font-medium text-gray-700">Business/Farm Name</label>
-        <input type="text" name="business-name" class="mt-1 w-full p-2 rounded">
+        <input type="text" name="business-name">
       </div>
 
       <div>
         <label class="block font-medium text-gray-700">Email Address</label>
-        <input type="email" name="email" autocomplete="email" required class="mt-1 w-full p-2 rounded">
+        <input type="email" name="email" autocomplete="email" required>
       </div>
 
       <div>
         <label class="block font-medium text-gray-700">Phone Number</label>
-        <input type="tel" name="phone" autocomplete="tel" class="mt-1 w-full p-2 rounded">
+        <input type="tel" name="phone" autocomplete="tel">
       </div>
 
       <div>
@@ -61,12 +74,12 @@
 
       <div>
         <label class="block font-medium text-gray-700">Project Location – Address or Field Location</label>
-        <textarea name="project-location" rows="2" class="mt-1 w-full p-2 rounded"></textarea>
+        <textarea name="project-location" rows="2"></textarea>
       </div>
 
       <div>
         <label class="block font-medium text-gray-700">Nearest postcode or What3Words</label>
-        <input type="text" name="postcode-w3w" class="mt-1 w-full p-2 rounded">
+        <input type="text" name="postcode-w3w">
       </div>
 
       <div>
@@ -87,35 +100,39 @@
 
       <div>
         <label class="block font-medium text-gray-700">Field/Area Size (if known)</label>
-        <input type="text" name="field-size" class="mt-1 w-full p-2 rounded">
+        <input type="text" name="field-size">
       </div>
 
       <div>
         <label class="block font-medium text-gray-700">Crop or Surface Type</label>
-        <input type="text" name="crop-type" class="mt-1 w-full p-2 rounded">
+        <input type="text" name="crop-type">
       </div>
 
       <div>
         <label class="block font-medium text-gray-700">Preferred Date or Timeframe</label>
-        <input type="text" name="preferred-date" class="mt-1 w-full p-2 rounded">
+        <input type="text" name="preferred-date">
       </div>
 
       <div>
         <label class="block font-medium text-gray-700">Any Special Access Instructions</label>
-        <textarea name="access-instructions" rows="2" class="mt-1 w-full p-2 rounded"></textarea>
+        <textarea name="access-instructions" rows="2"></textarea>
       </div>
 
       <div>
         <label class="block font-medium text-gray-700">Project Goals / What You’d Like to Achieve</label>
-        <textarea name="project-goals" rows="4" class="mt-1 w-full p-2 rounded"></textarea>
+        <textarea name="project-goals" rows="4"></textarea>
       </div>
 
       <div>
-        <button type="submit" class="bg-green-600 hover:bg-green-700 text-white font-semibold px-6 py-3 rounded shadow-md w-full">Submit Proposal</button>
+        <button type="submit" class="bg-green-600 hover:bg-green-700 text-white font-semibold px-6 py-3 rounded shadow w-full">
+          Submit Proposal
+        </button>
       </div>
-    </form>
 
-    <p class="text-sm text-gray-500 mt-6 text-center">We respect your privacy – your details will only be used to respond to your enquiry.</p>
+      <p class="text-sm text-gray-500 text-center">
+        We respect your privacy – your details will only be used to respond to your enquiry.
+      </p>
+    </form>
   </section>
 
 </body>
