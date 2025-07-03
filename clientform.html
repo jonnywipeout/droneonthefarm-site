@@ -5,41 +5,55 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Client Proposal Form</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body { font-family: 'Inter', sans-serif; background-color: #f8fafc; }
+    .glass-form input, .glass-form textarea {
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
+    }
+    .glass-form input:focus, .glass-form textarea:focus {
+      background: rgba(255, 255, 255, 0.25);
+      outline: none;
+    }
+  </style>
 </head>
-<body class="bg-gray-50">
+<body class="bg-gray-100 min-h-screen flex items-center justify-center p-6">
 
-  <section class="max-w-3xl mx-auto p-6 bg-white rounded-lg shadow-md mt-10 mb-20">
-    <form name="client-proposal" method="POST" data-netlify="true" class="space-y-6">
-      <h2 class="text-2xl font-bold text-gray-800 mb-4">Client Job Proposal – Information Sheet</h2>
+  <section class="max-w-3xl w-full glass-form bg-white/50 backdrop-blur-md p-8 rounded-lg shadow-lg">
+    <form name="client-proposal" method="POST" data-netlify="true" action="/thank-you.html" class="space-y-6">
+      <input type="hidden" name="form-name" value="client-proposal">
+      <h2 class="text-2xl font-bold text-gray-800">Client Job Proposal – Information Sheet</h2>
 
       <div>
         <label class="block font-medium text-gray-700">Client Name</label>
-        <input type="text" name="client-name" required class="mt-1 w-full rounded border-gray-300 shadow-sm">
+        <input type="text" name="client-name" autocomplete="name" required class="mt-1 w-full p-2 rounded">
       </div>
 
       <div>
         <label class="block font-medium text-gray-700">Business/Farm Name</label>
-        <input type="text" name="business-name" class="mt-1 w-full rounded border-gray-300 shadow-sm">
+        <input type="text" name="business-name" class="mt-1 w-full p-2 rounded">
       </div>
 
       <div>
         <label class="block font-medium text-gray-700">Email Address</label>
-        <input type="email" name="email" required class="mt-1 w-full rounded border-gray-300 shadow-sm">
+        <input type="email" name="email" autocomplete="email" required class="mt-1 w-full p-2 rounded">
       </div>
 
       <div>
         <label class="block font-medium text-gray-700">Phone Number</label>
-        <input type="tel" name="phone" class="mt-1 w-full rounded border-gray-300 shadow-sm">
+        <input type="tel" name="phone" autocomplete="tel" class="mt-1 w-full p-2 rounded">
       </div>
 
       <div>
         <label class="block font-medium text-gray-700">Preferred Contact Method</label>
         <div class="flex flex-wrap gap-4 mt-2">
-          <label><input type="checkbox" name="contact-method" value="Phone" class="mr-1"> Phone</label>
-          <label><input type="checkbox" name="contact-method" value="Email" class="mr-1"> Email</label>
-          <label><input type="checkbox" name="contact-method" value="WhatsApp" class="mr-1"> WhatsApp</label>
+          <label><input type="checkbox" name="contact-method[]" value="Phone" class="mr-1"> Phone</label>
+          <label><input type="checkbox" name="contact-method[]" value="Email" class="mr-1"> Email</label>
+          <label><input type="checkbox" name="contact-method[]" value="WhatsApp" class="mr-1"> WhatsApp</label>
           <label class="flex items-center">
-            <input type="checkbox" name="contact-method" value="Other" class="mr-1"> Other:
+            <input type="checkbox" name="contact-method[]" value="Other" class="mr-1"> Other:
             <input type="text" name="contact-method-other" class="ml-2 border rounded px-2 py-1">
           </label>
         </div>
@@ -47,25 +61,25 @@
 
       <div>
         <label class="block font-medium text-gray-700">Project Location – Address or Field Location</label>
-        <textarea name="project-location" rows="2" class="mt-1 w-full rounded border-gray-300 shadow-sm"></textarea>
+        <textarea name="project-location" rows="2" class="mt-1 w-full p-2 rounded"></textarea>
       </div>
 
       <div>
         <label class="block font-medium text-gray-700">Nearest postcode or What3Words</label>
-        <input type="text" name="postcode-w3w" class="mt-1 w-full rounded border-gray-300 shadow-sm">
+        <input type="text" name="postcode-w3w" class="mt-1 w-full p-2 rounded">
       </div>
 
       <div>
         <label class="block font-medium text-gray-700">Type of Service Required</label>
         <div class="mt-2 space-y-2">
-          <label><input type="checkbox" name="service" value="2D Field Mapping" class="mr-1"> 2D Field Orthomosaic Mapping</label><br>
-          <label><input type="checkbox" name="service" value="Aerial Photography" class="mr-1"> High-Resolution Aerial Photography</label><br>
-          <label><input type="checkbox" name="service" value="3D Terrain Analysis" class="mr-1"> 3D Terrain / Stockpile Analysis</label><br>
-          <label><input type="checkbox" name="service" value="Construction Mapping" class="mr-1"> Construction Progress Mapping</label><br>
-          <label><input type="checkbox" name="service" value="SFI Mapping" class="mr-1"> SFI / ELMS-Compliant Mapping</label><br>
-          <label><input type="checkbox" name="service" value="Roof Inspection" class="mr-1"> Roof or Asset Inspection</label><br>
+          <label><input type="checkbox" name="service[]" value="2D Field Mapping" class="mr-1"> 2D Field Orthomosaic Mapping</label><br>
+          <label><input type="checkbox" name="service[]" value="Aerial Photography" class="mr-1"> High-Resolution Aerial Photography</label><br>
+          <label><input type="checkbox" name="service[]" value="3D Terrain Analysis" class="mr-1"> 3D Terrain / Stockpile Analysis</label><br>
+          <label><input type="checkbox" name="service[]" value="Construction Mapping" class="mr-1"> Construction Progress Mapping</label><br>
+          <label><input type="checkbox" name="service[]" value="SFI Mapping" class="mr-1"> SFI / ELMS-Compliant Mapping</label><br>
+          <label><input type="checkbox" name="service[]" value="Roof Inspection" class="mr-1"> Roof or Asset Inspection</label><br>
           <label class="flex items-center">
-            <input type="checkbox" name="service" value="Other" class="mr-1"> Other:
+            <input type="checkbox" name="service[]" value="Other" class="mr-1"> Other:
             <input type="text" name="service-other" class="ml-2 border rounded px-2 py-1">
           </label>
         </div>
@@ -73,35 +87,35 @@
 
       <div>
         <label class="block font-medium text-gray-700">Field/Area Size (if known)</label>
-        <input type="text" name="field-size" class="mt-1 w-full rounded border-gray-300 shadow-sm">
+        <input type="text" name="field-size" class="mt-1 w-full p-2 rounded">
       </div>
 
       <div>
         <label class="block font-medium text-gray-700">Crop or Surface Type</label>
-        <input type="text" name="crop-type" class="mt-1 w-full rounded border-gray-300 shadow-sm">
+        <input type="text" name="crop-type" class="mt-1 w-full p-2 rounded">
       </div>
 
       <div>
         <label class="block font-medium text-gray-700">Preferred Date or Timeframe</label>
-        <input type="text" name="preferred-date" class="mt-1 w-full rounded border-gray-300 shadow-sm">
+        <input type="text" name="preferred-date" class="mt-1 w-full p-2 rounded">
       </div>
 
       <div>
         <label class="block font-medium text-gray-700">Any Special Access Instructions</label>
-        <textarea name="access-instructions" rows="2" class="mt-1 w-full rounded border-gray-300 shadow-sm"></textarea>
+        <textarea name="access-instructions" rows="2" class="mt-1 w-full p-2 rounded"></textarea>
       </div>
 
       <div>
         <label class="block font-medium text-gray-700">Project Goals / What You’d Like to Achieve</label>
-        <textarea name="project-goals" rows="4" class="mt-1 w-full rounded border-gray-300 shadow-sm"></textarea>
+        <textarea name="project-goals" rows="4" class="mt-1 w-full p-2 rounded"></textarea>
       </div>
 
       <div>
-        <button type="submit" class="bg-green-600 hover:bg-green-700 text-white font-semibold px-6 py-2 rounded">
-          Submit Proposal
-        </button>
+        <button type="submit" class="bg-green-600 hover:bg-green-700 text-white font-semibold px-6 py-3 rounded shadow-md w-full">Submit Proposal</button>
       </div>
     </form>
+
+    <p class="text-sm text-gray-500 mt-6 text-center">We respect your privacy – your details will only be used to respond to your enquiry.</p>
   </section>
 
 </body>
