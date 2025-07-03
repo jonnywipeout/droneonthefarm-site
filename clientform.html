@@ -2,138 +2,66 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Client Job Proposal Form – Drone on the Farm</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Client Job Proposal Form</title>
+  <meta name="description" content="Submit your drone mapping job proposal with Drone on the Farm." />
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" />
+  <script src="https://cdn.tailwindcss.com/3.4.16"></script>
   <style>
     body {
-      font-family: 'Inter', sans-serif;
       background-color: #f8fafc;
-      background-image:
-        radial-gradient(circle at 10% 20%, rgba(45, 106, 79, 0.05) 0%, transparent 20%),
-        radial-gradient(circle at 90% 60%, rgba(29, 53, 87, 0.05) 0%, transparent 25%),
-        radial-gradient(circle at 50% 100%, rgba(45, 106, 79, 0.05) 0%, transparent 30%);
-      background-attachment: fixed;
+      font-family: sans-serif;
     }
-    .glass-form input,
-    .glass-form textarea {
+    .glass {
       background: rgba(255, 255, 255, 0.15);
-      backdrop-filter: blur(10px);
-      border: 1px solid rgba(0, 0, 0, 0.1);
-      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
-      padding: 0.75rem;
-      width: 100%;
-      border-radius: 0.5rem;
+      backdrop-filter: blur(12px);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+      border-radius: 16px;
+      padding: 2rem;
     }
-    .glass-form input:focus,
-    .glass-form textarea:focus {
-      background: rgba(255, 255, 255, 0.25);
-      outline: none;
+    .glass input,
+    .glass textarea {
+      background: rgba(255, 255, 255, 0.5);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(255, 255, 255, 0.3);
     }
   </style>
 </head>
 <body class="min-h-screen flex items-center justify-center p-6">
+  <div class="max-w-2xl w-full glass">
+    <h1 class="text-2xl font-bold text-center text-gray-800 mb-6">Client Job Proposal – Information Sheet</h1>
+    <form name="clientform" method="POST" action="/thank-you.html" data-netlify="true" netlify-honeypot="bot-field">
+      <input type="hidden" name="form-name" value="clientform">
+      <p hidden><label>Don’t fill this out: <input name="bot-field" /></label></p>
 
-  <section class="max-w-3xl w-full glass-form bg-white/60 backdrop-blur-md p-8 rounded-xl shadow-lg">
-    <form name="client-proposal" method="POST" data-netlify="true" action="/thank-you.html" class="space-y-6">
-      <input type="hidden" name="form-name" value="client-proposal">
-      <h2 class="text-3xl font-bold text-gray-800 text-center mb-8">Client Job Proposal – Information Sheet</h2>
+      <div class="space-y-4">
+        <input type="text" name="clientname" placeholder="Client Name" class="w-full p-3 rounded-md" required>
+        <input type="text" name="businessname" placeholder="Business/Farm Name" class="w-full p-3 rounded-md">
+        <input type="email" name="email" placeholder="Email Address" class="w-full p-3 rounded-md" required>
+        <input type="tel" name="phone" placeholder="Phone Number" class="w-full p-3 rounded-md">
 
-      <div>
-        <label class="block font-medium text-gray-700">Client Name</label>
-        <input type="text" name="client-name" autocomplete="name" required>
-      </div>
+        <fieldset>
+          <legend class="text-sm font-medium text-gray-700 mb-2">Preferred Contact Method</legend>
+          <div class="flex flex-wrap items-center gap-4">
+            <label class="flex items-center gap-2"><input type="checkbox" name="contactmethod" value="Phone">Phone</label>
+            <label class="flex items-center gap-2"><input type="checkbox" name="contactmethod" value="Email">Email</label>
+            <label class="flex items-center gap-2"><input type="checkbox" name="contactmethod" value="WhatsApp">WhatsApp</label>
+            <label class="flex items-center gap-2">
+              <input type="checkbox" name="contactmethod" value="Other">Other:
+              <input type="text" name="contactother" class="p-2 rounded-md border border-gray-300" placeholder="Specify">
+            </label>
+          </div>
+        </fieldset>
 
-      <div>
-        <label class="block font-medium text-gray-700">Business/Farm Name</label>
-        <input type="text" name="business-name">
-      </div>
+        <textarea name="location" rows="3" placeholder="Project Location – Address or Field Location" class="w-full p-3 rounded-md" required></textarea>
+        <input type="text" name="postcode" placeholder="Nearest postcode or What3Words" class="w-full p-3 rounded-md">
 
-      <div>
-        <label class="block font-medium text-gray-700">Email Address</label>
-        <input type="email" name="email" autocomplete="email" required>
-      </div>
-
-      <div>
-        <label class="block font-medium text-gray-700">Phone Number</label>
-        <input type="tel" name="phone" autocomplete="tel">
-      </div>
-
-      <div>
-        <label class="block font-medium text-gray-700">Preferred Contact Method</label>
-        <div class="flex flex-wrap gap-4 mt-2">
-          <label><input type="checkbox" name="contact-method[]" value="Phone" class="mr-1"> Phone</label>
-          <label><input type="checkbox" name="contact-method[]" value="Email" class="mr-1"> Email</label>
-          <label><input type="checkbox" name="contact-method[]" value="WhatsApp" class="mr-1"> WhatsApp</label>
-          <label class="flex items-center">
-            <input type="checkbox" name="contact-method[]" value="Other" class="mr-1"> Other:
-            <input type="text" name="contact-method-other" class="ml-2 border rounded px-2 py-1">
-          </label>
-        </div>
-      </div>
-
-      <div>
-        <label class="block font-medium text-gray-700">Project Location – Address or Field Location</label>
-        <textarea name="project-location" rows="2"></textarea>
-      </div>
-
-      <div>
-        <label class="block font-medium text-gray-700">Nearest postcode or What3Words</label>
-        <input type="text" name="postcode-w3w">
-      </div>
-
-      <div>
-        <label class="block font-medium text-gray-700">Type of Service Required</label>
-        <div class="mt-2 space-y-2">
-          <label><input type="checkbox" name="service[]" value="2D Field Mapping" class="mr-1"> 2D Field Orthomosaic Mapping</label><br>
-          <label><input type="checkbox" name="service[]" value="Aerial Photography" class="mr-1"> High-Resolution Aerial Photography</label><br>
-          <label><input type="checkbox" name="service[]" value="3D Terrain Analysis" class="mr-1"> 3D Terrain / Stockpile Analysis</label><br>
-          <label><input type="checkbox" name="service[]" value="Construction Mapping" class="mr-1"> Construction Progress Mapping</label><br>
-          <label><input type="checkbox" name="service[]" value="SFI Mapping" class="mr-1"> SFI / ELMS-Compliant Mapping</label><br>
-          <label><input type="checkbox" name="service[]" value="Roof Inspection" class="mr-1"> Roof or Asset Inspection</label><br>
-          <label class="flex items-center">
-            <input type="checkbox" name="service[]" value="Other" class="mr-1"> Other:
-            <input type="text" name="service-other" class="ml-2 border rounded px-2 py-1">
-          </label>
-        </div>
-      </div>
-
-      <div>
-        <label class="block font-medium text-gray-700">Field/Area Size (if known)</label>
-        <input type="text" name="field-size">
-      </div>
-
-      <div>
-        <label class="block font-medium text-gray-700">Crop or Surface Type</label>
-        <input type="text" name="crop-type">
-      </div>
-
-      <div>
-        <label class="block font-medium text-gray-700">Preferred Date or Timeframe</label>
-        <input type="text" name="preferred-date">
-      </div>
-
-      <div>
-        <label class="block font-medium text-gray-700">Any Special Access Instructions</label>
-        <textarea name="access-instructions" rows="2"></textarea>
-      </div>
-
-      <div>
-        <label class="block font-medium text-gray-700">Project Goals / What You’d Like to Achieve</label>
-        <textarea name="project-goals" rows="4"></textarea>
-      </div>
-
-      <div>
-        <button type="submit" class="bg-green-600 hover:bg-green-700 text-white font-semibold px-6 py-3 rounded shadow w-full">
+        <button type="submit" class="w-full mt-4 bg-green-600 hover:bg-green-700 text-white font-semibold px-4 py-3 rounded-md transition duration-200">
           Submit Proposal
         </button>
       </div>
-
-      <p class="text-sm text-gray-500 text-center">
-        We respect your privacy – your details will only be used to respond to your enquiry.
-      </p>
     </form>
-  </section>
-
+  </div>
 </body>
 </html>
