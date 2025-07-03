@@ -311,97 +311,145 @@ background-attachment: fixed;
 </div>
 </div>
 </section>
-<!-- Contact Section -->
-<section id="contact" class="py-24 px-6">
-<div class="container mx-auto">
-<h2 class="text-4xl font-bold text-center mb-16 text-gray-800">Get in Touch</h2>
-<div class="max-w-6xl mx-auto glass-card rounded-lg p-12">
-<div class="grid md:grid-cols-2 gap-12">
-<!-- Company Info -->
-<div class="flex flex-col justify-between">
-<div>
-<h3 class="text-2xl font-bold text-gray-800 mb-6">Let's Connect</h3>
-<p class="text-gray-600 mb-8">Professional UAV mapping and surveying in the UK using the latest drone technology for agriculture engineering and construction.</p>
-<div class="flex flex-col gap-6">
-<a href="mailto:droneonthefarm@outlook.com" class="flex items-center gap-4 text-gray-600 hover:text-primary transition-colors">
-<div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-full">
-<i class="ri-mail-line text-xl text-primary"></i>
-</div>
-<span>droneonthefarm@outlook.com</span>
-</a>
-<a href="https://www.youtube.com/@jonnywipeout" target="_blank" class="flex items-center gap-4 text-gray-600 hover:text-primary transition-colors">
-<div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-full">
-<i class="ri-youtube-line text-xl text-primary"></i>
-</div>
-<span>Watch on YouTube</span>
-</a>
-<a href="https://www.facebook.com/share/18qnxU1w6e/?mibextid=wwXIfr" target="_blank" class="flex items-center gap-4 text-gray-600 hover:text-primary transition-colors">
-  <div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-full">
-    <i class="ri-facebook-line text-xl text-primary"></i>
-  </div>
-  <span>Find us on Facebook</span>
-</a>
+
+
   
-<a href="tel:07771190394" class="flex items-center gap-4 text-gray-600 hover:text-primary transition-colors">
-<div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-full">
-<i class="ri-phone-line text-xl text-primary"></i>
-</div>
-<span>07771 190394</span>
-</a>
-</div>
-</div>
-<div class="mt-8">
-<h3 class="text-3xl font-['Pacifico'] text-primary mb-2">Drone on the farm</h3>
-<p class="text-gray-500">© 2025 All rights reserved.</p>
-</div>
-</div>
-<!-- Contact Form -->
-  <!-- Contact Form -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Drone on the Farm - Aerial Mapping Services</title>
+  <meta name="description" content="Precision drone mapping and aerial services for agriculture, construction, and planning in the UK. Get high-resolution orthomosaics, 3D models, and SFI-compliant reports." />
+  <meta name="robots" content="index, follow" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" />
+  <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#16a34a',
+            secondary: '#166534'
+          },
+          borderRadius: {
+            'button': '8px'
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .glass {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      box-shadow: 0 8px 32px rgba(31, 38, 135, 0.07);
+    }
+    .glass-button {
+      background: rgba(22, 163, 74, 0.2);
+      backdrop-filter: blur(10px);
+      transition: all 0.3s ease;
+    }
+    .glass-button:hover {
+      background: rgba(22, 163, 74, 0.3);
+    }
+    .glass-form input, .glass-form textarea {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      transition: all 0.3s ease;
+    }
+    .glass-form input:focus, .glass-form textarea:focus {
+      background: rgba(255, 255, 255, 0.2);
+    }
+  </style>
+</head>
+<body class="bg-white text-gray-800">
+  <!-- Contact Section -->
+  <section id="contact" class="py-24 px-6">
+    <div class="container mx-auto">
+      <h2 class="text-4xl font-bold text-center mb-16 text-gray-800">Get in Touch</h2>
+      <div class="max-w-6xl mx-auto glass-card rounded-lg p-12">
+        <div class="grid md:grid-cols-2 gap-12">
+          <!-- Company Info -->
+          <div class="flex flex-col justify-between">
+            <div>
+              <h3 class="text-2xl font-bold text-gray-800 mb-6">Let's Connect</h3>
+              <p class="text-gray-600 mb-8">Professional UAV mapping and surveying in the UK using the latest drone technology for agriculture engineering and construction.</p>
+              <div class="flex flex-col gap-6">
+                <a href="mailto:droneonthefarm@outlook.com" class="flex items-center gap-4 text-gray-600 hover:text-primary transition-colors">
+                  <div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-full">
+                    <i class="ri-mail-line text-xl text-primary"></i>
+                  </div>
+                  <span>droneonthefarm@outlook.com</span>
+                </a>
+                <a href="https://www.youtube.com/@jonnywipeout" target="_blank" class="flex items-center gap-4 text-gray-600 hover:text-primary transition-colors">
+                  <div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-full">
+                    <i class="ri-youtube-line text-xl text-primary"></i>
+                  </div>
+                  <span>Watch on YouTube</span>
+                </a>
+                <a href="https://www.facebook.com/share/18qnxU1w6e/?mibextid=wwXIfr" target="_blank" class="flex items-center gap-4 text-gray-600 hover:text-primary transition-colors">
+                  <div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-full">
+                    <i class="ri-facebook-line text-xl text-primary"></i>
+                  </div>
+                  <span>Find us on Facebook</span>
+                </a>
+                <a href="tel:07771190394" class="flex items-center gap-4 text-gray-600 hover:text-primary transition-colors">
+                  <div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-full">
+                    <i class="ri-phone-line text-xl text-primary"></i>
+                  </div>
+                  <span>07771 190394</span>
+                </a>
+              </div>
+            </div>
+            <div class="mt-8">
+              <h3 class="text-3xl font-['Pacifico'] text-primary mb-2">Drone on the farm</h3>
+              <p class="text-gray-500">© 2025 All rights reserved.</p>
+            </div>
+          </div>
+          <!-- Contact Form -->
+          <div>
+            <form name="contact" method="POST" action="/thank-you.html" data-netlify="true" netlify-honeypot="bot-field" class="glass-form">
+              <input type="hidden" name="form-name" value="contact">
+              <p hidden><label>Don’t fill this out: <input name="bot-field" /></label></p>
+              <div class="mb-6">
+                <input type="text" name="name" placeholder="Your Name" class="w-full px-4 py-3 rounded-lg text-gray-800 bg-white/50 border-none focus:ring-2 focus:ring-primary/50 outline-none" required>
+              </div>
+              <div class="mb-6">
+                <input type="email" name="email" placeholder="Your Email" class="w-full px-4 py-3 rounded-lg text-gray-800 bg-white/50 border-none focus:ring-2 focus:ring-primary/50 outline-none" required>
+              </div>
+              <div class="mb-6">
+                <textarea name="message" placeholder="Your Message" rows="5" class="w-full px-4 py-3 rounded-lg text-gray-800 bg-white/50 border-none focus:ring-2 focus:ring-primary/50 outline-none" required></textarea>
+              </div>
+              <div class="mb-8">
+                <button type="submit" class="bg-primary text-white px-8 py-3 rounded-button font-medium hover:bg-primary/90 transition-colors w-full whitespace-nowrap">Send Message</button>
+              </div>
+              <div class="text-center px-4">
+                <a href="/clientform.html" class="inline-block bg-green-600 hover:bg-green-700 text-white font-semibold text-lg px-6 py-3 rounded-md shadow transition duration-200">
+                  Fill Out Our Client Job Proposal Form
+                </a>
+                <p class="mt-3 text-sm text-gray-700">
+                  For drone mapping, SFI boundaries, inspections or aerial projects – use this form for quick booking.
+                </p>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Footer -->
+  <footer class="text-xs text-gray-500 bg-black/5 py-4 text-center">
+    &copy; 2025 Drone on the Farm. All rights reserved.
+  </footer>
+</body>
+</html>
 
-  <!-- Honeypot -->
-  <p hidden>
-    <label>Don’t fill this out: <input name="bot-field" /></label>
-  </p>
-
-  <div class="mb-6">
-    <input type="text" name="name" placeholder="Your Name" class="w-full px-4 py-3 rounded-lg text-gray-800 bg-white/50 border-none focus:ring-2 focus:ring-primary/50 outline-none" required>
-  </div>
-
-  <div class="mb-6">
-    <input type="email" name="email" placeholder="Your Email" class="w-full px-4 py-3 rounded-lg text-gray-800 bg-white/50 border-none focus:ring-2 focus:ring-primary/50 outline-none" required>
-  </div>
-
-  <div class="mb-6">
-    <textarea name="message" placeholder="Your Message" rows="5" class="w-full px-4 py-3 rounded-lg text-gray-800 bg-white/50 border-none focus:ring-2 focus:ring-primary/50 outline-none" required></textarea>
-  </div>
-
-  <div>
-    <button type="submit" class="bg-primary text-white px-8 py-3 rounded-button font-medium hover:bg-primary/90 transition-colors w-full whitespace-nowrap !rounded-button">Send Message</button>
-  </div>
-</form>
-
-<div class="glass p-8 rounded-lg">
-  <h3 class="text-2xl font-bold text-gray-800 mb-6">Send a Message</h3>
-  <form name="contact" method="POST" action="/thank-you" data-netlify="true">
-<div class="glass p-8 rounded-lg">
-
-<form name="contact" method="POST" action="/thank-you.html" data-netlify="true" netlify-honeypot="bot-field" class="glass-form">
-
-  <input type="hidden" name="form-name" value="contact">
-</div>
-</div>
-</div>
-  <div class="mt-10 text-center px-4">
-  <a href="/clientform.html"
-     class="inline-block bg-green-600 hover:bg-green-700 text-white font-semibold text-lg px-6 py-3 rounded-md shadow transition duration-200">
-    Fill Out Our Client Job Proposal Form
-  </a>
-  <p class="mt-3 text-sm text-gray-700">
-    For drone mapping, SFI boundaries, inspections or aerial projects – use this form for quick booking.
-  </p>
-</div>
-
-</section>
 <script id="navigationScript">
 document.addEventListener('DOMContentLoaded', function() {
 const mobileMenuButton = document.querySelector('.md\\:hidden');
@@ -465,6 +513,8 @@ behavior: 'smooth'
 });
 });
 </script>
+
+  
   <!-- Footer -->
 <footer class="text-xs text-gray-500 bg-black/5 py-4 mt-16 text-center space-x-4">
   <button onclick="openModal('privacyModal')" class="hover:underline">Privacy Policy</button>
