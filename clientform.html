@@ -115,7 +115,7 @@
 
         <div>
           <label class="block mb-1 font-medium">Type of Service Required</label>
-          <select name="serviceType" class="w-full px-4 py-3 rounded-lg">
+          <select name="serviceType" class="w-full px-4 py-3 rounded-lg" onchange="document.getElementById('otherServiceField').style.display = this.value === 'Other' ? 'block' : 'none';">
             <option value="">-- Please select --</option>
             <option value="2D Orthomosaic map">2D Orthomosaic map</option>
             <option value="3D Modelling">3D Modelling</option>
@@ -124,7 +124,13 @@
             <option value="Roof inspection">Roof inspection</option>
             <option value="Construction site monitoring">Construction site monitoring</option>
             <option value="Aerial photography or video">Aerial photography or video</option>
+            <option value="Other">Other - please specify</option>
           </select>
+
+          <div id="otherServiceField" style="display:none;" class="mt-4">
+            <label class="block mb-1 font-medium">Other Service Description</label>
+            <input type="text" name="otherServiceDescription" placeholder="Brief description" class="w-full px-4 py-3 rounded-lg">
+          </div>
         </div>
 
         <div>
