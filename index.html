@@ -502,18 +502,18 @@ document.addEventListener('DOMContentLoaded', function () {
   const menuBtn = document.querySelector('nav button');
   let mobileMenu = document.querySelector('.mobile-nav');
 
-  if (!mobileMenu) {
-    mobileMenu = document.createElement('div');
-    mobileMenu.className = 'mobile-nav glass fixed top-20 right-6 rounded-xl p-6 shadow-lg flex flex-col space-y-4 z-50 text-right hidden md:hidden';
-    mobileMenu.innerHTML = `
-      <a href="#home" class="text-gray-800 hover:text-primary">Home</a>
-      <a href="#services" class="text-gray-800 hover:text-primary">Services</a>
-      <a href="#gallery" class="text-gray-800 hover:text-primary">Gallery</a>
-      <a href="#map-access" class="text-gray-800 hover:text-primary">Map Access</a>
-      <a href="#contact" class="text-gray-800 hover:text-primary">Contact</a>
-    `;
-    document.body.appendChild(mobileMenu);
-  }
+ if (!mobileMenu) {
+  mobileMenu = document.createElement('div');
+  mobileMenu.className = 'mobile-nav glass fixed top-20 right-6 rounded-xl p-6 shadow-lg flex flex-col space-y-4 z-50 text-right hidden md:hidden';
+  mobileMenu.innerHTML = `
+    <a href="#home" class="text-white font-semibold hover:text-primary transition-colors">Home</a>
+    <a href="#services" class="text-white font-semibold hover:text-primary transition-colors">Services</a>
+    <a href="#gallery" class="text-white font-semibold hover:text-primary transition-colors">Gallery</a>
+    <a href="#map-access" class="text-white font-semibold hover:text-primary transition-colors">Map Access</a>
+    <a href="#contact" class="text-white font-semibold hover:text-primary transition-colors">Contact</a>
+  `;
+  document.body.appendChild(mobileMenu);
+}
 
   menuBtn.addEventListener('click', () => {
     mobileMenu.classList.toggle('hidden');
